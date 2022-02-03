@@ -28,17 +28,17 @@
 
 
 
-# ------------------------------------------
-# Задание 1
-# Напишите программу, которая запрашивает два
-# целых числа x и y, после чего вычисляет и выводит
-# значение x в степени y.
+# # ------------------------------------------
+# # Задание 1
+# # Напишите программу, которая запрашивает два
+# # целых числа x и y, после чего вычисляет и выводит
+# # значение x в степени y.
+# #
+# number = int(input("Enter the number :  "))
+# power_of = int(input(f"To which power to raise the number '{number}' ?  "))
+# number_to_power_of = number ** power_of
+# print(f"{number}  to the power of  {power_of}  equals :  {number_to_power_of}")
 #
-number = int(input("Enter the number :  "))
-power_of = int(input(f"To which power to raise the number '{number}' ?  "))
-number_to_power_of = number ** power_of
-print(f"{number}  to the power of  {power_of}  equals :  {number_to_power_of}")
-
 
 # # ------------------------------------------
 # # Задание 2
