@@ -2,7 +2,7 @@
 # Wydano 25.01.2022
 # Wykonać do: 16.02.2022
 # Temat Цикл for
-# Wykładowca Буйлук Андрей
+# Wykładowca _____________________
 # Lesson09
 #
 # Курс: «Введение в язык программирования Python

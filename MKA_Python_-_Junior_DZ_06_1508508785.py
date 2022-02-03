@@ -2,7 +2,7 @@
 # Wydano 20.01.2022
 # Wykonać do: 11.02.2022
 # Temat Циклы: while
-# Wykładowca Буйлук Андрей
+# Wykładowca _____________________
 # Lesson08
 #
 # Курс:
