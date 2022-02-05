@@ -31,44 +31,56 @@
 # личество предложений и выведите на экран полученный
 # результат.
 
-# ------------------------------------------
-# Задание 1
-# Пользователь вводит с клавиатуры строку. Проверьте
-# является ли введенная строка палиндромом. Палин-
-# дром — слово или текст, которое читается одинаково
-# слева направо и справа налево. Например, кок; А роза
-# упала на лапу Азора; доход; А буду я у дуба.
+# # ------------------------------------------
+# # Задание 1
+# # Пользователь вводит с клавиатуры строку. Проверьте
+# # является ли введенная строка палиндромом. Палин-
+# # дром — слово или текст, которое читается одинаково
+# # слева направо и справа налево. Например, кок; А роза
+# # упала на лапу Азора; доход; А буду я у дуба.
+# #
 #
+# #Variables
+# text_entered = ''
+# text_reversed = ''
+# text_entered_lower = ''
+# text_entered_alnum = ''
+# text_reversed_alnum = ''
+#
+# # Enter data
+# # text_entered = str(input('Enter some text :  '))
+# # text_entered = 'Madam in Eden, I’m Adam'
+# text_entered = 'A Toyota! Race fast... safe car: a Toyota'
+#
+# # Compare data
+# text_entered_lower = text_entered.lower()
+# # print(text_entered_lower)
+# for i in text_entered_lower:
+#     if i.isalnum() == True:
+#         text_entered_alnum = text_entered_alnum + i
+# for i in text_entered_alnum:
+#     text_reversed_alnum = i + text_reversed_alnum
+#
+# # Final result
+# # for i in text_entered:
+# #     text_reversed = i + text_reversed
+# print(f'>>> original text:\n{text_entered}')
+# # print(text_reversed)
+# print(f'\n>>> alphanumeric characters only, in normal order:\n{text_entered_alnum}')
+# print(f'{text_reversed_alnum}\n^^^ alphanumeric characters only, in order from end to beginning.\n')
+# if text_entered_alnum == text_reversed_alnum:
+#     print('>>> YES! The entered string is a palindrome.')
+# else:
+#     print('>>> NO! The string entered is not a palindrome.')
 
-#Variables
-text_entered = ''
-text_reversed = ''
-text_entered_lower = ''
-text_entered_alnum = ''
-text_reversed_alnum = ''
-
+# ------------------------------------------
+# Задание 2
+# Пользователь вводит с клавиатуры некоторый текст,
+# после чего пользователь вводит список зарезервированных
+# слов. Необходимо найти в тексте все зарезервированные
+# слова и изменить их регистр на верхний. Вывести на
+# экран измененный текст.
+#
 # Enter data
 # text_entered = str(input('Enter some text :  '))
 # text_entered = 'Madam in Eden, I’m Adam'
-text_entered = 'A Toyota! Race fast... safe car: a Toyota'
-
-# Compare data
-text_entered_lower = text_entered.lower()
-# print(text_entered_lower)
-for i in text_entered_lower:
-    if i.isalnum() == True:
-        text_entered_alnum = text_entered_alnum + i
-for i in text_entered_alnum:
-    text_reversed_alnum = i + text_reversed_alnum
-
-# Final result
-# for i in text_entered:
-#     text_reversed = i + text_reversed
-print(f'>>> original text:\n{text_entered}')
-# print(text_reversed)
-print(f'\n>>> alphanumeric characters only, in normal order:\n{text_entered_alnum}')
-print(f'{text_reversed_alnum}\n^^^ alphanumeric characters only, in order from end to beginning.\n')
-if text_entered_alnum == text_reversed_alnum:
-    print('>>> YES! The entered string is a palindrome.')
-else:
-    print('>>> NO! The string entered is not a palindrome.')
