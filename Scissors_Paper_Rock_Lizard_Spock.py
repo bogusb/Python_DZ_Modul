@@ -141,7 +141,7 @@ while game:
         player2_name = 'Computer_Bot'
     elif game_type == 'pvp':
         player2_name = str(input("Enter your name player 2:  [Bot] = play with computer  : "))
-        if player2_name == 'Bot' or player2_name == 'bot':
+        if player2_name == 'Bot' or player2_name == 'bot' or player2_name == 'BOT':
             game_type = 'pve'
             player2_name = 'Computer_Bot'
     rounds = 3
