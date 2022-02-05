@@ -48,9 +48,9 @@ text_entered_alnum = ''
 text_reversed_alnum = ''
 
 # Enter data
-text_entered = str(input('Enter some text :  '))
-# text_entered = 'А роза упала на лапу Азора'
-# text_entered = 'А буду я у дуба'
+# text_entered = str(input('Enter some text :  '))
+# text_entered = 'Madam in Eden, I’m Adam'
+text_entered = 'A Toyota! Race fast... safe car: a Toyota'
 
 # Compare data
 text_entered_lower = text_entered.lower()
@@ -64,11 +64,10 @@ for i in text_entered_alnum:
 # Final result
 # for i in text_entered:
 #     text_reversed = i + text_reversed
-print(f'>>> Text original:\n{text_entered}')
+print(f'>>> original text:\n{text_entered}')
 # print(text_reversed)
-# print()
-# print(text_entered_alnum)
-print(f'>>> Alphanumeric characters only, in order from end to beginning:\n{text_reversed_alnum}')
+print(f'\n>>> alphanumeric characters only, in normal order:\n{text_entered_alnum}')
+print(f'{text_reversed_alnum}\n^^^ alphanumeric characters only, in order from end to beginning.\n')
 if text_entered_alnum == text_reversed_alnum:
     print('>>> YES! The entered string is a palindrome.')
 else:
