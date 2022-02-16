@@ -130,4 +130,4 @@ print(f'Negative counter: {counter_negative}')
 print(f'Positive counter: {counter_positive}')
 print(f'Zeros counter: {counter_of_zeros}')
 
-input()
+# input()
