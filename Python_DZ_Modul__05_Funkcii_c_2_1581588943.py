@@ -88,22 +88,21 @@
 # параметра. Полученный результат возвращается из функции.
 
 
-def isprime(integer):
-    if integer < 2:
-        return False
-    for i in range(2, integer):
-        if integer % i == 0:
-            return False
-    return True
+def is_prime(integer):
+    if 1 < integer:
+        for i in range(2, integer):
+            if integer % i == 0:
+                return False
+        return True
 
-print(isprime(1))
+# print(is_prime(4))
 
 def number_of_primes(list_of_integers):
-    number_of_primes = 0
+    number_of_prim = 0
     for element in list_of_integers:
-        if isprime(element) == True:
-            number_of_primes = number_of_primes + 1
-    return number_of_primes
+        if is_prime(element) == True:
+            number_of_prim = number_of_prim + 1
+    return number_of_prim
 
 
 a = number_of_primes([2, 5, 4, -11, 137, -2, 2, 1, 0, 3])
