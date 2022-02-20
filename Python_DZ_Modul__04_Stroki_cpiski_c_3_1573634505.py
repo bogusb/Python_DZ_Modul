@@ -45,61 +45,74 @@ ad1_list = list_of_integers_1 + list_of_integers_2
 
 # ad 2 - Сформировать третий список, содержащий элементы
 # обоих списков без повторений;
-ad2_list = ad1_list[:]
-for i in ad1_list:
+ad2_list = list_of_integers_1 + list_of_integers_2
+
+for i in list_of_integers_1 + list_of_integers_2:
     if ad2_list.count(i) > 1:
         ad2_list.remove(i)
 
 # ad 3 - Сформировать третий список, содержащий элементы
 # общие для двух списков
-ad3_list1 = list_of_integers_1[:]
-# ad3_list1.sort()
 ad3_list2 = list_of_integers_2[:]
-# ad3_list2.sort()
 
-# ad3_list1 = [-26, -20, -17, -9, -6, -6, 8, 8, 14, 20, 20, 25]
-# ad3_list2 = [-15, -9, -7, -6, -6, -1, 8, -9, 15, 20, 20]
-
-for i in ad3_list1:
-    if ad3_list2.count(i) > 0:
+for i in list_of_integers_1:
+    if ad3_list2.count(i) >= 1:
         ad3_list2.remove(i)
         ad3_list.append(i)
 
+# ad 4 - Сформировать третий список, содержащий только
+# уникальные элементы каждого из списков;
 
+for i in list_of_integers_1:
+    if list_of_integers_1.count(i) == 1:
+        ad4_list.append(i)
 
+for i in list_of_integers_2:
+    if list_of_integers_2.count(i) == 1:
+        ad4_list.append(i)
 
+# ad 5 - Сформировать третий список, содержащий только
+# минимальное и максимальное значение каждого из списков.
 
-
-
-
-# minimum_element = list_of_integers[0]
-# maximum_element = list_of_integers[0]
-# counter_negative = 0
-# counter_positive = 0
-# counter_of_zeros = 0
-
-
-# for i in list_of_integers:
-#     if minimum_element > i:
-#         minimum_element = i
-#     if maximum_element < i:
-#         maximum_element = i
-#     if i < 0:
-#         counter_negative = counter_negative + 1
-#     if i > 0:
-#         counter_positive = counter_positive + 1
-#     if i == 0:
-#         counter_of_zeros = counter_of_zeros + 1
+# # wariant z .sort()
+# ad5_list1 = list_of_integers_1[:]
+# ad5_list1.sort()
+# ad5_list2 = list_of_integers_2[:]
+# ad5_list2.sort()
 #
-#
-# print(f'MIN: {minimum_element}')
-# print(f'MAX: {maximum_element}')
-# print(f'All elements: {len(list_of_integers)}')
-# print(f'Negative counter: {counter_negative}')
-# print(f'Positive counter: {counter_positive}')
-# print(f'Zeros counter: {counter_of_zeros}')
+# ad5_list.append(ad5_list1[0])
+# ad5_list.append(ad5_list1[-1])
+# ad5_list.append(ad5_list2[0])
+# ad5_list.append(ad5_list2[-1])
 
-print('Original:')
+# # wariant z 'for'
+minimum_element = list_of_integers_1[0]
+maximum_element = list_of_integers_1[0]
+
+for i in list_of_integers_1:
+    if minimum_element > i:
+        minimum_element = i
+    if maximum_element < i:
+        maximum_element = i
+
+ad5_list.append(minimum_element)
+ad5_list.append(maximum_element)
+
+minimum_element = list_of_integers_2[0]
+maximum_element = list_of_integers_2[0]
+
+for i in list_of_integers_2:
+    if minimum_element > i:
+        minimum_element = i
+    if maximum_element < i:
+        maximum_element = i
+
+ad5_list.append(minimum_element)
+ad5_list.append(maximum_element)
+
+
+# Final result:
+print('Initial lists:')
 print(f'List 1 ({len(list_of_integers_1)} elements): {list_of_integers_1}')
 print(f'List 2 ({len(list_of_integers_2)} elements): {list_of_integers_2}')
 
@@ -112,6 +125,11 @@ print(f'({len(ad2_list)} elements): {ad2_list}')
 print('\nad 3 - List that contains items common to the two lists:')
 print(f'({len(ad3_list)} elements): {ad3_list}')
 
+print('\nad 4 - List containing only unique elements of each of the lists:')
+print(f'({len(ad4_list)} elements): {ad4_list}')
+
+print('\nad 5 - List containing only minimum and maximum values of each of the lists:')
+print(f'({len(ad5_list)} elements): {ad5_list}')
 
 # input()
 
