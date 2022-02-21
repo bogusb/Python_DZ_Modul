@@ -88,31 +88,54 @@
 # параметра. Полученный результат возвращается из функции.
 
 
-def is_prime(integer):
-    if 1 < integer:
-        for i in range(2, integer):
-            if integer % i == 0:
-                return False
-        return True
-
-# print(is_prime(4))
-
-def number_of_primes(list_of_integers):
-    number_of_prim = 0
-    for element in list_of_integers:
-        if is_prime(element) == True:
-            number_of_prim = number_of_prim + 1
-    return number_of_prim
-
-
-a = number_of_primes([2, 5, 4, -11, 137, -2, 2, 1, 0, 3])
-print(a)  # 5
-
-
-# ----------------------------------------------------
+# def is_prime(integer):
+#     if 1 < integer:
+#         for i in range(2, integer):
+#             if integer % i == 0:
+#                 return False
+#         return True
+#
+# # print(is_prime(4))
+#
+# def number_of_primes(list_of_integers):
+#     number_of_prim = 0
+#     for element in list_of_integers:
+#         if is_prime(element) == True:
+#             number_of_prim = number_of_prim + 1
+#     return number_of_prim
+#
+#
+# a = number_of_primes([2, 5, 4, -11, 137, -2, 2, 1, 0, 3])
+# print(a)  # 5
 
 
 # ----------------------------------------------------
+# Задание 4
+# Напишите функцию, удаляющую из списка целых
+# некоторое заданное число. Из функции нужно вернуть
+# количество удаленных элементов.
+
+
+def remove_integer_from_list(integer, list):
+    c = list.count(integer)
+    for i in range(c):
+        list.remove(integer)
+    return c
+
+
+a_list = [2, 5, 4, 2, 3, -2, 2, 1, 0, 3]
+a_integer = 2
+a = remove_integer_from_list(a_integer, a_list)
+
+print(a)  # 3
+print(a_list)  # [5, 4, 3, -2, 1, 0, 3]
+
+
+# ----------------------------------------------------
+# Задание 5
+# Напишите функцию, которая получает два списка в
+# качестве параметра и возвращает список, содержащий
+# элементы обоих списков.
 
 
 # ----------------------------------------------------
