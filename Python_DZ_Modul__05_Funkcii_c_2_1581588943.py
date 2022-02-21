@@ -51,15 +51,15 @@
 # Полученный результат возвращается из функции.
 
 
-# def multiplication_elements(list_of_integers):
-#     m = 1
-#     for element in list_of_integers:
-#         m = m * element
-#     return m
+def multiplication_elements(list_of_integers):
+    m = 1
+    for element in list_of_integers:
+        m = m * element
+    return m
 
 
-# a = multiplication_elements([2, 5, 4, 5])
-# print(a)  # 200
+a = multiplication_elements([2, 5, 4, 5])
+print(a)  # 200
 
 
 # ----------------------------------------------------
@@ -69,16 +69,16 @@
 # Полученный результат возвращается из функции.
 
 
-# def smallest_element(list_of_integers):
-#     s = list_of_integers[0]
-#     for element in list_of_integers:
-#         if s > element:
-#             s = element
-#     return s
-#
-#
-# a = smallest_element([2, 5, 3, 1, -11, 87, 9, -2])
-# print(a)  # -11
+def smallest_element(list_of_integers):
+    s = list_of_integers[0]
+    for element in list_of_integers:
+        if s > element:
+            s = element
+    return s
+
+
+a = smallest_element([2, 5, 3, 1, -11, 87, 9, -2])
+print(a)  # -11
 
 
 # ----------------------------------------------------
@@ -88,25 +88,24 @@
 # параметра. Полученный результат возвращается из функции.
 
 
-# def is_prime(integer):
-#     if 1 < integer:
-#         for i in range(2, integer):
-#             if integer % i == 0:
-#                 return False
-#         return True
-#
-# # print(is_prime(4))
-#
-# def number_of_primes(list_of_integers):
-#     number_of_prim = 0
-#     for element in list_of_integers:
-#         if is_prime(element) == True:
-#             number_of_prim = number_of_prim + 1
-#     return number_of_prim
-#
-#
-# a = number_of_primes([2, 5, 4, -11, 137, -2, 2, 1, 0, 3])
-# print(a)  # 5
+def is_prime(integer):
+    if 1 < integer:
+        for i in range(2, integer):
+            if integer % i == 0:
+                return False
+        return True
+
+
+def number_of_primes(list_of_integers):
+    number_of_prim = 0
+    for element in list_of_integers:
+        if is_prime(element) == True:
+            number_of_prim = number_of_prim + 1
+    return number_of_prim
+
+
+a = number_of_primes([2, 5, 4, -11, 137, -2, 2, 1, 0, 3])
+print(a)  # 5
 
 
 # ----------------------------------------------------
@@ -125,9 +124,9 @@ def remove_integer_from_list(integer, list):
 
 a_list = [2, 5, 4, 2, 3, -2, 2, 1, 0, 3]
 a_integer = 2
-a = remove_integer_from_list(a_integer, a_list)
+c = remove_integer_from_list(a_integer, a_list)
 
-print(a)  # 3
+print(c)  # 3
 print(a_list)  # [5, 4, 3, -2, 1, 0, 3]
 
 
@@ -138,7 +137,36 @@ print(a_list)  # [5, 4, 3, -2, 1, 0, 3]
 # элементы обоих списков.
 
 
+def concatenate_two_lists(list1, list2):
+    return list1 + list2
+
+
+a_list = [2, 5, 4, 3]
+b_list = [12, 15, 14, 13]
+c = concatenate_two_lists(a_list, b_list)
+print(c)  # [2, 5, 4, 3, 12, 15, 14, 13]
+
+
 # ----------------------------------------------------
+# Задание 6
+# Напишите функцию, высчитывающую степень каждого
+# элемента списка целых. Значение для степени передаётся
+# в качестве параметра, список тоже передаётся в качестве
+# параметра. Функция возвращает новый список, содержащий
+# полученные результаты.
+
+
+def power_of_elements_list(power, list_of_integers):
+    for i in range(len(list_of_integers)):
+        list_of_integers[i] = list_of_integers[i]**power
+    return list_of_integers
+
+
+a_power = 4
+a_list = [2, 5, 4, 3, -2, 1, 0, 3]
+p = power_of_elements_list(a_power, a_list)
+
+print(p)  # [16, 625, 256, 81, 16, 1, 0, 81]
 
 
 # ----------------------------------------------------
